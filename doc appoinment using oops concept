@@ -1,0 +1,4218 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+class nirbikar
+{
+    string name , fname , address , uname , password , day;
+    int contact , age , u ,n ,k , h , s ,j ,t ;
+    public:
+    void thank();
+    void pateintinfo();
+    void doctor();
+    void department();
+    void appoinment();
+    void check();
+    int user();
+    int doctora();
+    void admin();
+};
+void nirbikar::admin()
+{
+        cout<<"\n";
+        cout<<"\n";
+        cout<<"                                 Login\n";
+        cout<<"                        ENTER THE USER NAME : ";
+        cin>>uname;
+        cout<<"                        Enter your password : ";
+        cin>>password;
+        if(password == "admin")
+        {
+            system("CLS");
+            doctora();
+        }
+        else{
+            system("CLS");
+            cout<<endl;
+            cout<<endl;
+            cout<<"                           wronge password \n";
+            cout<<"                              try again\n";
+            admin();
+        }
+}
+int nirbikar::doctora(){
+            cout<<"                      welcome to nirbikar : \n";
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"                   Employee name : "<<uname<<endl;
+            cout<<"\n";
+            department();
+            cout<<"Enter : ";
+            cin>>h;
+            system("CLS");
+            switch(h)
+            {
+                case 1:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Generalphysician.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Generalphysician.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Generalphysician.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 2:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_paediatrician.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK AND 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_paediatrician.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK AND 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_paediatrician.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK AND 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else{
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back AND 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 3:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Dentist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK AND 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Dentist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK AND 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Dentist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK AND 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else{
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back AND 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 4:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Allergist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Allergist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Allergist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 5:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Dermatologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Dermatologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Dermatologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 6:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Opthalmologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Opthalmologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Opthalmologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 7:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Gynecologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Gynecologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Gynecologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 8:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Cardiologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Cardiologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Cardiologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 9:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Endocrinologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Endocrinologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Endocrinologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 10:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Gasterologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Gasterologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Gasterologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 11:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Nephrologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Nephrologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Nephrologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 12:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Urologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Urologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Urologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 13:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Neurologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Neurologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Neurologist.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 14:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Psychiatrists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Psychiatrists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Psychiatrists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 15:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Oncologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Oncologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Oncologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 16:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_OrthopadicSurgeon.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_OrthopadicSurgeon.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_OrthopadicSurgeon.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 17:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"     | sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+                    cout<<"     |------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"     |  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+                    cout<<"     |  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+                    cout<<"     |  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+                    cout<<"     |      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_anestheologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_anestheologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_anestheologists.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                case 18:
+                {
+                    cout<<"\n";
+                    cout<<"                     Search your name & Enter your Serial no \n";
+                    cout<<"| sno. |     Doctor          | Degree |  Available In | Fees |"<<endl;
+                    cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+                    cout<<"|      |                     |        |               |      |"<<endl;
+                    cout<<"|  1.  | Dr. Asish verma     |  MBBS  |      Day      | 250  |"<<endl;
+                    cout<<"|  2.  | Dr. Dk jain         |  MD    |     Night     | 500  |"<<endl;
+                    cout<<"|  3.  | Dr. Ashok singhai   |  MD    |     Night     | 500  |"<<endl;
+                    cout<<"|  4.  | Dr. guarav yadav    |  MD    |      Day      | 250  |"<<endl;
+                    cout<<"|  5.  | Dr. anchal sharma   |  MD    |      Day      | 300  |"<<endl;
+                    cout<<"|      |                     |        |               |      |"<<endl;
+                    cout<<"\n";
+                    int z;
+                    cout<<"      Enter : ";
+                    cin>>z;
+                    system("CLS");
+                    if(z==1){
+                        string mytext;
+                        ifstream inc("1_Instant.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==2){
+                       string mytext;
+                        ifstream inc("2_Instant.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==3){
+                       string mytext;
+                        ifstream inc("3_Instant.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==4){
+                       string mytext;
+                        ifstream inc("4_Instant.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else if(z==5){
+                       string mytext;
+                        ifstream inc("5_Instant.txt");
+                        while(getline(inc , mytext)){
+                            cout<<mytext<<endl;
+                        }
+                        inc.close();
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"ENTER 1 TO GO BACK & 2 FOR EXIT\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"\n";
+                        cout<<"\n";
+                        cout<<"Enter appropiate no\n";
+                        cout<<"Enter 1 to go back & 2 for exit\n";
+                        cout<<"Enter : ";
+                        cin>>t;
+                        if(t==1){
+                            system("CLS");
+                            doctora();
+                        }
+                        else{
+                           exit;
+                        }
+                    }
+                }
+                break;
+                default :
+                {
+                    cout<<"\n";
+                    cout<<"\n";
+                    cout<<"Enter appropiate no\n";
+                    cout<<"Enter 1 to go back AND 2 for exit\n";
+                    cout<<"Enter : ";
+                    cin>>t;
+                    if(t==1){
+                        doctora();
+                    }
+                    else{
+                        exit;
+                    }
+                }
+                
+            }
+        }
+
+
+int nirbikar::user()
+{
+        int a;
+        cout<<"\n";
+        cout<<"                                      Nirbikar welcomes you\n                                   ";
+        cout<<"\n";
+        cout<<"\n";
+        cout<<"        We are providing 24/7 services\n";
+        cout<<"\n";
+        cout<<"        If you want take an appoinment     :  Enter 1\n";
+        cout<<"        And for Check the Doctors and Details :  Enter 2\n";
+        cout<<"\n";
+        cout<<"        Note :- we book Appoinment for up to 7 days";
+        cout<<"\n";
+        cout<<"        Enter : ";
+        cin>>a;
+        if(a==1){
+            appoinment();
+        }
+        else{
+            system("CLS");
+            check();
+        }
+}
+void nirbikar::appoinment()
+{
+    pateintinfo();
+        
+}
+
+void nirbikar::pateintinfo()
+{
+    cout<<endl;
+    cout<<"                   Fill the Details(without space)\n";
+    cout<<endl;
+    cout<<"            Name of patient : ";
+    cin>>name;
+    cout<<"           Father/Husband name : ";
+    cin>>fname;
+    cout<<"           Age : ";
+    cin>>age;
+    cout<<"          City : ";
+    cin>>address;
+    cout<<"          contact no :";
+    cin>>contact;
+    system("CLS");
+        cout<<"\n";
+        cout<<"                                The Details of Patient                           ";
+        cout<<"\n";
+        cout<<"\n";
+        cout<<"                           Name                 : "<<name<<endl;
+        cout<<"                           Fathers/Husband name : "<<fname<<endl;
+        cout<<"                           Age                  : "<<age<<endl;
+        cout<<"                           City                 : "<<address<<endl;
+        cout<<"                           Contact no           : "<<contact<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        cout<<"\n";
+        int p;
+        cout<<"                The details are correct : Enter 1 & for corrected : Enter 2\n";
+        cout<<"                                       Enter : ";
+        cin>>p;
+        cout<<"\n";
+        if(p==1){
+           department();
+           doctor();
+        }
+        else{
+            pateintinfo();
+        }
+    }
+void nirbikar::thank()
+{
+    system("CLS");
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"                             THANK YOU                                     "<<endl;
+    cout<<"               Your Appoinment is successfully booked\n";
+    cout<<"                    we will contact you shortly                            "<<endl;
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    // Sleep(1000);
+}
+void nirbikar::department()
+{
+    cout<<"   Select Department :"<<endl;
+    cout<<"\n";
+    cout<<"     1. general phsycian       -     cold cough fever"<<endl;
+    cout<<"     2. paediatrician          -     childrens doctor"<<endl;
+    cout<<"     3. dentist                -     teeth treatment"<<endl;
+    cout<<"     4. allergist              -     alergy treatment"<<endl;
+    cout<<"     5. Dermatologist          -     skin related"<<endl;
+    cout<<"     6. opthalmologists        -     eye vission"<<endl;
+    cout<<"     7. gynecologists          -     female health"<<endl;
+    cout<<"     8. cardiologists          -     bp & heart"<<endl;
+    cout<<"     9. endocrinologists       -     diabetes , growth issue , thyroid"<<endl;
+    cout<<"    10. gasterologists         -     digestive system "<<endl;
+    cout<<"    11. nephrologist           -     kidney disease"<<endl;
+    cout<<"    12. urologist              -     urinary track(speacially for male)"<<endl;
+    cout<<"    13. neurologist            -     brain related"<<endl;
+    cout<<"    14. psychiatrists          -     mental health care" <<endl;
+    cout<<"    15. oncologists            -     cancer related issue"<<endl;
+    cout<<"    16. orthopadic surgeons    -     bone enjuries"<<endl;
+    cout<<"    17. anestheologists        -     monitor the person before and after surgery"<<endl;
+    cout<<"    18. Emergency cases        -     Instant TeleConsultation"<<endl;
+    cout<<"    19. Go back "<<endl;
+    cout<<"\n";
+    cout<<"\n";
+}
+
+void nirbikar::doctor()
+{
+    cout<<"Enter : ";
+    cin>>n;
+    system("CLS");
+    switch (n)
+    {
+        case 1:
+        {
+            int k , u;
+            string day;
+            cout<<" General physician "<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree | Patient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                    cout<<"select the day( mon tue sat ) : ";
+                    cin>>day;
+                    ofstream out("1_Generalphysician.txt ",ios::app);
+                    out<<"\n\npatient name : " + name;
+                    out<<"\nfathers/Husband name : "+ fname;
+                    out<<"\nAge : "+ age;
+                    out<<"\nCity : "+ address;
+                    out<<"\ncontact: "+ contact;
+                    out<<"\nday : " + day;
+                    out.close();
+                    thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                    cout<<"select the day( mon tue sat ) : ";
+                    cin>>day;
+                    ofstream out("2_Generalphysician.txt ",ios::app);
+                    out<<"\n\npatient name : " + name;
+                    out<<"\nfathers/Husband name : "+ fname;
+                    out<<"\nAge : "+ age;
+                    out<<"\nCity : "+ address;
+                    out<<"\ncontact: "+ contact;
+                    out<<"\nday : " + day;
+                    out.close();
+                    thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("3_Generalphysician.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 2:
+        {
+            int k;
+            cout<<"paediatrician"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_paediatrician.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_paediatrician.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_paediatrician.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 3:
+        {
+          
+            cout<<"Dentist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Dentist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==2)
+            {
+              
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Dentist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+              
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Dentist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 4:
+        {
+            int k;
+            cout<<"Allergist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+              
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Allergist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Allergist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Allergist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 5:
+        {
+            int k;
+            cout<<"Dermatologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Dermatologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Dermatologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Dermatologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 6:
+        {
+            int k;
+            cout<<"Opthalmologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Opthalmologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Opthalmologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Opthalmologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 7:
+        {
+            int k;
+            cout<<"Gynecologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Gynecologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Gynecologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Gynecologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 8:
+        {
+            int k;
+            cout<<"Cardiologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Cardiologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Cardiologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Cardiologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 9:
+        {
+            int k;
+            cout<<"Endocrinologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Endocrinologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Endocrinologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Endocrinologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 10:
+        {
+            int k;
+            cout<<"Gasterologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Gasterologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Gasterologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Gasterologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 11:
+        {
+            int k;
+            cout<<"Nephrologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Nephrologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Nephrologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Nephrologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 12:
+        {
+            int k;
+            cout<<"Urologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Urologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Urologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Urologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 13:
+        {
+            int k;
+            cout<<"Neurologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Neurologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Neurologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Neurologist.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 14:
+        {
+            int k;
+            cout<<"Psychiatrists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Psychiatrists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Psychiatrists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Psychiatrists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 15:
+        {
+            int k;
+            cout<<"Oncologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+              
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_Oncologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_Oncologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+               
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_Oncologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 16:
+        {
+            int k;
+            cout<<"Orthopadic Surgeon"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_OrthopadicSurgeon.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_OrthopadicSurgeon.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_OrthopadicSurgeon.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 17:
+        {
+            int k;
+            cout<<"anestheologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+             cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+               
+                cout<<"Ashish verma - MBBS\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day( mon tue sat ) : ";
+                cin>>day;
+                ofstream out("1_anestheologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+               
+                cout<<"DK jain - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( tue wed ) : ";
+                cin>>day;
+                ofstream out("2_anestheologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+              
+                cout<<"Ashok singhai - MD\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                cout<<"select the day ( fri sat sun ) : ";
+                cin>>day;
+                ofstream out("3_anestheologists.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out<<"\nday : " + day;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 18:
+        {
+            int k;
+            cout<<"Instant treatment by telecommunication"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Available In | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |      Day      | 250  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |     Night     | 500  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |     Night     | 500  |"<<endl;
+            cout<<"|  4.  | Dr. guarav yadav    |  MD    |      Day      | 250  |"<<endl;
+            cout<<"|  5.  | Dr. anchal sharma   |  MD    |      Day      | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"select Doctor : ";
+            cin>>k;
+            if(k==1){
+                int day;
+                cout<<"Ashish verma\n";
+                cout<<"fees : 250\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                ofstream out("1_Instant.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\nCity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            
+            }
+            else if(k==2)
+            {
+                int day;
+                cout<<"DK jain\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                ofstream out("2_Instant.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\ncity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==3)
+            {
+                int day;
+                cout<<"Ashok singhai\n";
+                cout<<"fees : 500\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                ofstream out("3_Instant.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\ncity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==4)
+            {
+                int day;
+                cout<<"Gaurav Yadav\n";
+                cout<<"fees : 250\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                    ofstream out("4_Instant.txt ",ios::app);
+                    out<<"\n\npatient name : " + name;
+                    out<<"\nfathers/Husband name : "+ fname;
+                    out<<"\nAge : "+ age;
+                    out<<"\ncity : "+ address;
+                    out<<"\ncontact: "+ contact;
+                    out.close();
+                    thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else if(k==5)
+            {
+                int day;
+                cout<<"Anchal Sharma\n";
+                cout<<"fees : 300\n";
+                cout<<"To final Enter 1 , To go back Enter 2\n";
+                cout<<"Enter : ";
+                cin>>u;
+                if(u==1){
+                ofstream out("5_Instant.txt ",ios::app);
+                out<<"\n\npatient name : " + name;
+                out<<"\nfathers/Husband name : "+ fname;
+                out<<"\nAge : "+ age;
+                out<<"\ncity : "+ address;
+                out<<"\ncontact: "+ contact;
+                out.close();
+                thank();
+                }
+                else{
+                    department();
+                    doctor();
+                }
+            }
+            else{
+                int s;
+                cout<<"please Enter Appropiate no.\n";
+                cout<<"enter 1 to go back and 2 for exit : ";
+                cin>>s;
+                if(s==1){
+                    department();
+                    doctor();
+                }
+                else{
+                    exit;
+                }
+            }
+        }
+        break;
+        case 19: 
+        {
+            department();
+            doctor();
+        }
+        break;
+        default:
+        {
+            cout<<"Please select valid option";
+            int f;
+            cout<<"To Go back Enter 1 and for exit Enter 2 : ";
+            cin>>f;
+            if(f==1){
+                department();
+                doctor();
+            }
+            else{
+                exit;
+            }
+        }
+    }
+}               
+
+void nirbikar::check()
+{
+    cout<<"\n";
+    cout<<"                                     Nirbikar welcomes you\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"                    We are providing 24/7 services through online consultancy\n";
+    cout<<"\n";
+    cout<<"                                   Departments and The Doctors :-";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"  General physician "<<endl;
+    cout<<"\n";
+    cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+    cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+    cout<<"|      |                     |        |               |      |"<<endl;
+    cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+    cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+    cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+    cout<<"|      |                     |        |               |      |"<<endl;
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"  paediatrician"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"  Dentist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"  Allergist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"  Dermatologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"  Opthalmologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Gynecologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Cardiologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Endocrinologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Gasterologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Nephrologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Urologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Neurologist"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Psychiatrists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Oncologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Orthopadic Surgeon"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"anestheologists"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Ptient visit | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |  mon tue sat  | 500  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |    tue wed    | 300  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |  fri sat sun  | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            cout<<"Instant treatment by telecommunication"<<endl;
+            cout<<"\n";
+            cout<<"| sno. |     Doctor          | Degree |  Available In | Fees |"<<endl;
+            cout<<"|------|---------------------|--------|---------------|------|"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"|  1.  | Dr. Asish verma     |  MBBS  |      Day      | 250  |"<<endl;
+            cout<<"|  2.  | Dr. Dk jain         |  MD    |     Night     | 500  |"<<endl;
+            cout<<"|  3.  | Dr. Ashok singhai   |  MD    |     Night     | 500  |"<<endl;
+            cout<<"|  4.  | Dr. guarav yadav    |  MD    |      Day      | 250  |"<<endl;
+            cout<<"|  5.  | Dr. anchal sharma   |  MD    |      Day      | 300  |"<<endl;
+            cout<<"|      |                     |        |               |      |"<<endl;
+            cout<<"\n";
+            cout<<"\n";
+            int f;
+            cout<<"for Appoinment Enter 1 and for exit Enter 2 : ";
+            cin>>f;
+            if(f==1){
+               appoinment();
+            }
+            else{
+               exit;
+            }
+}
+int main()
+{
+    nirbikar n1;
+    int l;
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"........................................ Welcome To Nirvikar!........................................"<<endl;
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"                                        user : Enter 1 \n";
+    cout<<"                                       Employee : Enter 2 \n";
+    cout<<"                                             Enter : ";
+    cin>>l;
+    if(l==1)
+    {
+        system("Cls");
+        n1.user();
+    }
+    else
+    {
+        system("Cls");
+        n1.admin();
+    }
+}
